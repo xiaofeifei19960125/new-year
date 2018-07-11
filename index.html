@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>Fireworks</title>
   
   
@@ -11,21 +12,70 @@
 
 <style>
 
-		
+  #nav{
+  	overflow-x:scroll;
+  	color: #ffffff;
+  	font-size: 60px;
+  	position: fixed;
+  	z-index: 9999;
+  }		
 			
 
 	#year{
-		height: 30%;
+		height: 50%;
 		width: 60%;
 		display: block;
-		margin-top: 20px;
+		margin-top: 10%;
 		margin-left: 20%;
 		position: fixed;
 		z-index: 9999;
 
 	}
 	
-	
+	     .wrap{
+	     	height:100px;
+	     overflow: hidden;
+	     position: fixed;
+	     top:6%;
+	     left: 100;
+	     width: 100%;
+	     z-index: 9999;}
+      p{
+      	margin:0;
+      	height: 100px;
+      	width: 100%;
+      	font-size: 25px;
+      	}
+      .content p{
+        position: fixed;
+        	
+       
+      }
+      @-webkit-keyframes anim1{
+        0% {top: 30px;opacity: 1}
+        50% {top: -30px;opacity: 1}
+        75% {top: -30px ;opacity: 0}
+        100%{top:30px;opacity: 0}
+      }
+      @-webkit-keyframes anim2{
+     
+        0% {top: -30px;opacity: 0}
+        25% {top: 30px;opacity: 0}
+        50% {top: 30px;opacity: 1}
+        100%{top: -30px;opacity: 1}
+      }
+
+      .content p:nth-child(1){background-color: red;}
+      .content p:nth-child(2){background-color: yellow;}
+      .content p:nth-child(1){
+        
+        -webkit-animation: anim1 3s linear infinite;
+      }
+      
+      .content p:nth-child(2){
+    
+        -webkit-animation: anim2 3s linear infinite;
+      }
 	
 </style>
   
@@ -33,6 +83,14 @@
 
 <body>
 		<div id="new">
+			
+	 <div class="wrap">
+	    <div class="content">
+				<p>祝福你在新的一年：合乐融融，财运滚滚，一帆风顺，二龙腾飞，三羊开泰，四季平安，五福临门，六六大顺，七星高照，八方来财，九九同心，十全十美.</p>
+				<p>祝福你在新的一年：合乐融融，财运滚滚，一帆风顺，二龙腾飞，三羊开泰，四季平安，五福临门，六六大顺，七星高照，八方来财，九九同心，十全十美.</p>
+
+    </div>
+  </div>
 			<img id="year" src="image/new.gif" />
 		</div>
     <script  src="js/index.js"></script>
